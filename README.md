@@ -3,4 +3,6 @@ michaelkelly.org
 
 Contents of www.michaelkelly.org.
 
-Helper script sync.sh makes uploading simpler.
+ * Web root is in "www" directory.
+ * Helper script sync.sh makes uploading simpler.
+ * That is all.

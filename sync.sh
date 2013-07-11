@@ -12,16 +12,16 @@
 
 cfg=$HOME/.s3cfg
 bucket=s3://www.michaelkelly.org
-files=(*.html *.txt)
+dir=www
 
 if [[ ! -f $cfg ]]; then
   echo "Config file $cfg does not exist. Aborting."
   exit 2
 fi
 
-echo Files to upload: ${files[@]}
+echo "Synchronizing directory $PWD/$dir"
 
-s3cmd -n --acl-public put ${files[@]} $bucket
+s3cmd -n --acl-public sync $dir/ $bucket
 
 echo -n "ok? [y/N] "
 read ok
@@ -31,4 +31,4 @@ if [[ "$ok" != "y" ]]; then
   exit 1
 fi
 
-s3cmd --acl-public put ${files[@]} $bucket
+s3cmd --acl-public sync $dir/ $bucket
