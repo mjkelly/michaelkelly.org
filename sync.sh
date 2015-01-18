@@ -9,6 +9,8 @@
 #
 # Wed Jul 10 23:51:20 EDT 2013
 # -----------------------------------------------------------------
+set -u
+set -e
 
 cfg=$HOME/.s3cfg
 bucket=s3://www.michaelkelly.org
