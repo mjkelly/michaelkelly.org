@@ -1,26 +1,38 @@
 body {
   font-family: Helvetica, sans-serif;
 }
-h2 {
-  margin-bottom: 0;
-}
-p {
-  margin-top: 0;
-  margin-bottom: 0.5em;
+h1 {
+  margin: 40px 0 40px 0;
 }
 h1.title {
   border-bottom: 1px solid #999;
 }
-p.title  {
+h2 {
+  margin: 40px 0 0 0;
+}
+h3 {
+  font-weight: normal;
   margin-bottom: 0;
+}
+a {
+  color: #478dff;
+}
+a:hover {
+  color: #2d5aa3;
+}
+
+p {
+  margin: 10px 0 10px 0;
 }
 
 .container {
   width: 740px;
   margin: 0 auto;
 }
-@media(max-width: 740px) {
+/* 740 is 80% of 925, so that is when we switch sizing, for a clean transition.
+ * */
+@media(max-width: 925px) {
   .container {
-    width: 100%;
+    width: 80%;
   }
 }
