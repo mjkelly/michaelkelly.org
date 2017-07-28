@@ -23,4 +23,4 @@ which aws || (echo "'aws' command not found. Aborting."; exit 2)
 echo "Synchronizing directory $PWD/$dir"
 aws --profile="$profile" \
   s3 sync "$dir" "$bucket" \
-  --recursive --acl=public-read --cache-control=max-age=3600
+  --acl=public-read --cache-control=max-age=3600
