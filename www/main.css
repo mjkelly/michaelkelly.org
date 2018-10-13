@@ -29,8 +29,7 @@ p {
   width: 740px;
   margin: 0 auto;
 }
-/* 740 is 80% of 925, so that is when we switch sizing, for a clean transition.
- * */
+/* 740 is 80% of 925: that is when we switch sizes, for a clean transition. */
 @media(max-width: 925px) {
   .container {
     width: 80%;
