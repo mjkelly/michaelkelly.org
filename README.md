@@ -19,3 +19,4 @@ To test the build process, you'll have to run `gulp`. That entails:
 1. Install `npm`, which is part of `nodejs`: https://nodejs.org/en/
 2. Install packages: `npm install`
 3. Build everything with gulp: `./node_modules/.bin/gulp build`
+4. Output files will be in `dist`.
