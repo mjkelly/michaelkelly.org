@@ -9,9 +9,14 @@ gulp.task('minify-css', () => {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('copy-assets', () => {
-  return gulp.src('www/assets/**')
-    .pipe(gulp.dest('dist/assets'));
+gulp.task('copy-assets-txt', () => {
+  return gulp.src('www/*.txt')
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('copy-assets-pdf', () => {
+  return gulp.src('www/*.pdf')
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('minify-html', () => {
@@ -29,4 +34,10 @@ gulp.task('clean', () => {
   return del(['dist']);
 });
 
-gulp.task('build', ['copy-assets', 'minify-html', 'minify-css', 'copy-js']);
+gulp.task('build', [
+  'copy-assets-txt',
+  'copy-assets-pdf',
+  'minify-html',
+  'minify-css',
+  'copy-js'
+]);
