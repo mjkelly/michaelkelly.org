@@ -19,6 +19,11 @@ gulp.task('copy-assets-pdf', () => {
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('copy-assets-png', () => {
+  return gulp.src('www/*.png')
+    .pipe(gulp.dest('dist'));
+});
+
 gulp.task('minify-html', () => {
   return gulp.src('www/index.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
@@ -37,6 +42,7 @@ gulp.task('clean', () => {
 gulp.task('build', [
   'copy-assets-txt',
   'copy-assets-pdf',
+  'copy-assets-png',
   'minify-html',
   'minify-css',
   'copy-js'
