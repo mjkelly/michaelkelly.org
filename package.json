@@ -4,7 +4,8 @@
   "description": "ulamthemovie.com website",
   "main": "gulpfile.js",
   "dependencies": {
-    "gulp-htmlmin": "^5.0.1"
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-inject-string": "^1.1.1"
   },
   "devDependencies": {
     "del": "^3.0.0",

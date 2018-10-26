@@ -2,6 +2,9 @@ const gulp = require('gulp');
 const cleanCSS = require('gulp-clean-css');
 const del = require('del');
 const htmlmin = require('gulp-htmlmin');
+const inject = require('gulp-inject-string');
+
+const dateStr = (new Date()).toGMTString();
 
 gulp.task('minify-css', () => {
   return gulp.src('www/*.css')
@@ -9,29 +12,15 @@ gulp.task('minify-css', () => {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('copy-assets-txt', () => {
-  return gulp.src('www/*.txt')
-    .pipe(gulp.dest('dist'));
-});
-
-gulp.task('copy-assets-pdf', () => {
-  return gulp.src('www/*.pdf')
-    .pipe(gulp.dest('dist'));
-});
-
-gulp.task('copy-assets-png', () => {
-  return gulp.src('www/*.png')
-    .pipe(gulp.dest('dist'));
-});
-
 gulp.task('minify-html', () => {
   return gulp.src('www/index.html')
+    .pipe(inject.replace('{{date}}', dateStr))
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('copy-js', () => {
-  return gulp.src('www/*.js')
+gulp.task('copy-assets', () => {
+  return gulp.src('www/assets/*')
     .pipe(gulp.dest('dist'));
 });
 
@@ -40,10 +29,7 @@ gulp.task('clean', () => {
 });
 
 gulp.task('build', [
-  'copy-assets-txt',
-  'copy-assets-pdf',
-  'copy-assets-png',
-  'minify-html',
   'minify-css',
-  'copy-js'
+  'minify-html',
+  'copy-assets',
 ]);
