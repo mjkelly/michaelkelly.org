@@ -21,7 +21,7 @@ gulp.task('minify-html', () => {
 
 gulp.task('copy-assets', () => {
   return gulp.src('www/assets/*')
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist/assets'));
 });
 
 gulp.task('clean', () => {
