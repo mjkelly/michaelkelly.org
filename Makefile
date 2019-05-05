@@ -1,7 +1,14 @@
+# The default rule must do everything; it's used by Netlify.
+.PHONY: all
+all: install build
+
 .PHONY: build
 build:
-	npm install && ./node_modules/.bin/gulp build
+	./node_modules/.bin/gulp build
 
+.PHONY: install
+install:
+	npm install
 
 .PHONY: clean
 clean:
