@@ -28,8 +28,8 @@ gulp.task('clean', () => {
   return del(['dist']);
 });
 
-gulp.task('build', [
+gulp.task('build', gulp.series(
   'minify-css',
   'minify-html',
   'copy-assets',
-]);
+));
