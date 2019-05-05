@@ -1,5 +1,8 @@
 date=$(shell date)
 
+.PHONY: all
+all: install build
+
 .PHONY: build
 build:
 	rm -rf dist
@@ -11,4 +14,3 @@ build:
 .PHONY: install
 install:
 	go get github.com/tdewolff/minify/cmd/minify
-	@minify --version
