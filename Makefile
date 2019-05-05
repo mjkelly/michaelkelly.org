@@ -13,4 +13,5 @@ build:
 
 .PHONY: install
 install:
+	env
 	go get github.com/tdewolff/minify/cmd/minify
