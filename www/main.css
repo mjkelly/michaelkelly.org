@@ -1,18 +1,17 @@
 body {
   font-family: Helvetica, sans-serif;
-}
-h1 {
-  margin: 40px 0 40px 0;
+  margin: 0;
 }
 h1.title {
+  font-family: "Courier New", Courier, monospace;
+  padding: 30px 0 30px 0;
+  margin: 0 0 30px 0;
+  width: 100%;
   border-bottom: 1px solid #999;
+  text-align: center;
 }
 h2 {
   margin: 40px 0 0 0;
-}
-h3 {
-  font-weight: normal;
-  margin-bottom: 0;
 }
 a {
   color: #478dff;
@@ -23,10 +22,6 @@ a:hover {
 
 p {
   margin: 15px 0 15px 0;
-}
-
-li {
-  margin: 10px 0 10px 0;
 }
 
 .container {
