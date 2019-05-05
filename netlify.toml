@@ -1,0 +1,2 @@
+[Settings]
+  environment = { GO_IMPORT_PATH = "github.com/mjkelly/michaelkelly.org" }
