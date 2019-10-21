@@ -9,7 +9,6 @@ cf_id=EJKWL55KLXE9D
 scripts=$(dirname $0)
 
 which aws || (echo "'aws' command not found. Aborting."; exit 2)
-which hugo || (echo "'hugo' command not found. Aborting."; exit 2)
 [ -f $cfg ] || (echo "Config file $cfg does not exist. Aborting."; exit 2)
 
 echo "Building..."
