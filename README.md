@@ -2,24 +2,23 @@
 
 Contents of www.michaelkelly.org.
 
+The site is built with [Jekyll](https://jekyllrb.com).
+
+## Setup
+
+1. Get ruby/gems: <https://jekyllrb.com/docs/installation/>
+2. Install dependencies of this project: `bundle install`
+
+Now you'll be able to use the scripts in the `scripts` directory.
+
 ## Local testing
 
-You can view the files in `www` directly.
+For development, you can run `./scripts/preview.sh`. It'll bind on port 4000
+(beware, it's accessible from other hosts!)
 
-To test the build process, you'll have to run `gulp`. That entails:
+## Deployment
 
-1. Install `npm`, which is part of `nodejs`: https://nodejs.org/en/
-2. Run `make`.
+As a last check, you can run `./scripts/generate.sh`, then inspect the output
+in the `_site` directory.
 
-Yes, we chain make -> gulp, and that's a little silly. I'm doing that so that I
-can swap out the guts of the minification process when I find something that
-doesn't rely on 20MB of node!
-
-## Deploying
-
-This repo is hooked up to Netlify, so updating just requires committing to
-`master`.
-
-Everything is in `www`, but we have build scripts to build `dist` (which
-contains minified output).
-
+Then, run `./scripts/deploy.sh` to do the actual deploy.
