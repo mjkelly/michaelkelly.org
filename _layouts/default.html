@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>michaelkelly.org</title>
+  <title>michaelkelly.org{% if page.title != "home" %}/{{page.title}}{% endif %}</title>
   <link rel="shortcut icon" href="assets/mjk-monogram-32-trans.png" />
   <link rel="canonical" href="https://www.michaelkelly.org" />
   <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
@@ -19,36 +19,11 @@
   </script>
 </head>
 <body>
-  <h1 class="title">michaelkelly.org</h1>
-  <nav>
-  <ul>
-    
-    <li 
-        class="current"
-        >
-      <a href="/">home</a>
-    </li>
-    
-    <li >
-      <a href="/projects">projects</a>
-    </li>
-    
-  </ul>
-</nav>
-
+  <h1 class="title">michaelkelly.org{% if page.title != "home" %}: {{page.title}}{% endif %}</h1>
+  {% include nav.html %}
   <div class="container">
-    <p>Hi! I’m Michael Kelly, a software engineer in New York, NY.</p>
-
-<p>You can email me at <a href="mailto:m@michaelkelly.org">m@michaelkelly.org</a>. (You can
-use my <a href="assets/m-at-michaelkelly-dot-org-gpg.txt">GPG key</a> if you want.)</p>
-
-<p>Here’s my <a href="assets/michael-kelly-resume-oct-2018.pdf">resume</a>.</p>
-
-<p>I occasionally put things on <a href="https://github.com/mjkelly">GitHub</a>.</p>
-
-<p>I have a <a href="https://blog.michaelkelly.org">blog</a> which is not frequently updated.</p>
-
-    <small>updated: 2019-11-03 19:55:25 -0500</small>
+    {{ content }}
+    <small>updated: {{site.time}}</small>
   </div>
 </body>
 </html>

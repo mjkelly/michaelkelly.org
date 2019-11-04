@@ -1,1 +1,55 @@
-body{font-family:Helvetica,sans-serif;margin:0}h1.title{font-family:"Courier New",Courier,monospace;padding:30px 0 30px 0;margin:0 0 30px 0;width:100%;border-bottom:1px solid #999;text-align:center}h2{margin:40px 0 0 0}a{color:#478dff}a:hover{color:#2d5aa3}p{margin:15px 0 15px 0}.container{width:740px;margin:0 auto}@media(max-width:925px){.container{width:80%}}
+body {
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+}
+
+h1.title {
+  font-family: "Courier New", Courier, monospace;
+  padding: 50px 0 20px 0;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+nav {
+  text-align: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0 0 20px 0;
+}
+
+nav li {
+  text-transform: capitalize;
+  list-style-type: none;
+  display: inline-block;
+  width: 80px;
+}
+
+.current {
+  border-bottom: 1px solid #999;
+}
+
+h2 {
+  margin: 40px 0 0 0;
+}
+
+a {
+  color: #478dff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2d5aa3;
+}
+
+p {
+  margin: 15px 0 15px 0;
+}
+
+.container {
+  max-width: 740px;
+  margin: 0 auto;
+  width: 80%;
+}
