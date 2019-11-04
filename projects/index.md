@@ -14,5 +14,5 @@ These are all quite old.
   user-submitted; a lot is NSFW because it's the internet.)
 
 - [nato-alpha](http://nato-alpha.appspot.com):
-  Simple phonetic alphabet translator, made in an evening to try out some new
-  (to me) technologies. Translates "abc" to "alpha bravo charlie", etc.
+  Simple phonetic alphabet translator, made in an evening to try out Go on
+  AppEngine. Translates "abc" to "alpha bravo charlie", etc.
