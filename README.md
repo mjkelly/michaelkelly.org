@@ -7,7 +7,9 @@ The site is built with [Jekyll](https://jekyllrb.com).
 ## Setup
 
 1. Get ruby/gems: <https://jekyllrb.com/docs/installation/>
-2. Install dependencies of this project: `bundle install`
+2. Install node (or any other backend for ExecJS:
+   https://github.com/rails/execjs). `apt install nodejs`, etc.
+3. Install dependencies of this project: `bundle install`
 
 Now you'll be able to use the scripts in the `scripts` directory.
 
