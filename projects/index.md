@@ -13,6 +13,6 @@ These are all quite old.
   href="http://www.hjfreyer.com">Hunter Freyer</a>. (All content is
   user-submitted; a lot is NSFW because it's the internet.)
 
-- [nato-alpha](http://nato-alpha.appspot.com):
-  Simple phonetic alphabet translator, made in an evening to try out Go on
-  AppEngine. Translates "abc" to "alpha bravo charlie", etc.
+- [nato-alpha](https://nato-alpha.michaelkelly.org/):
+  Simple phonetic alphabet translator, made in an evening to try out some
+  simple vue.js. Translates "abc" to "alpha bravo charlie", etc.
