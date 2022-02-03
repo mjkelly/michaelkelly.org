@@ -15,7 +15,7 @@ Now you'll be able to use the scripts in the `scripts` directory.
 
 ## Local testing
 
-For development, you can run `./scripts/preview.sh`. It'll bind on port 4000
+For development, you can run `./scripts/preview.sh`. It'll bind on port 8080
 (beware, it's accessible from other hosts!)
 
 ## Deployment
