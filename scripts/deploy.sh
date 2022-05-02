@@ -18,7 +18,7 @@ echo "Deploying..."
 echo "Synchronizing directory $PWD/$dir"
 aws --profile="$profile" \
   s3 sync "$dir" "$bucket" \
-  --acl=public-read --cache-control=max-age=3600
+  --cache-control=max-age=3600
 echo "Invalidating CloudFront..."
 aws --profile=admin \
   cloudfront create-invalidation \
