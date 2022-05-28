@@ -2,14 +2,11 @@
 
 Contents of www.michaelkelly.org.
 
-The site is built with [Jekyll](https://jekyllrb.com).
+The site is built with [Hugo](https://gohugo.io/).
 
 ## Setup
 
-1. Get ruby/gems: <https://jekyllrb.com/docs/installation/>
-2. Install node (or any other backend for ExecJS:
-   https://github.com/rails/execjs). `apt install nodejs`, etc.
-3. Install dependencies of this project: `bundle install`
+1. Install Hugo: https://gohugo.io/getting-started/quick-start/
 
 Now you'll be able to use the scripts in the `scripts` directory.
 

@@ -4,7 +4,7 @@ set -e
 cfg=$HOME/.aws/config
 profile=admin
 bucket=s3://www.michaelkelly.org
-dir=_site
+dir=public
 cf_id=EJKWL55KLXE9D
 scripts=$(dirname $0)
 

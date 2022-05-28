@@ -1,6 +1,0 @@
-plugins:
-  - jekyll-minifier
-
-exclude:
-  - README.md
-  - scripts/*
