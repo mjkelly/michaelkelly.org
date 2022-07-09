@@ -12,7 +12,7 @@ Hi! I'm Michael Kelly, a software engineer in New York, NY.
 You can email me at [m@michaelkelly.org](mailto:m@michaelkelly.org). (You can
 use my [GPG key](assets/m-at-michaelkelly-dot-org-gpg.txt) if you want.)
 
-Here's my [resume](assets/michael-kelly-resume-feb-2020.pdf).
+Here's my [resume](assets/michael-kelly-resume-jul-2022.pdf).
 
 I occasionally put things on [GitHub](https://github.com/mjkelly).
 

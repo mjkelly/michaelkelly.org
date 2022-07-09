@@ -4,7 +4,7 @@ title: projects
 menu:
   main:
     name: "Projects"
-    url: "/"
+    url: "/projects/"
     weight: 2
 ---
 These are all quite old.
