@@ -17,3 +17,8 @@ Here's my [resume](assets/michael-kelly-resume-jul-2022.pdf).
 I occasionally put things on [GitHub](https://github.com/mjkelly).
 
 I have a [blog](https://blog.michaelkelly.org) which is not frequently updated.
+
+{{< unsafe >}}
+I'm also on <a rel="me" href="https://techhub.social/@mkelly">Mastodon</a>
+though I haven't figured out what to do with it yet.
+{{< /unsafe >}}
