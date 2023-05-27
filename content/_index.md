@@ -7,14 +7,14 @@ menu:
     url: "/"
     weight: 1
 ---
-Hi! I'm Michael Kelly, a software engineer in New York, NY.
+Hi! I'm Michael Kelly (he/him). I'm a software engineer in Los Angeles and New York.
 
-You can email me at [m@michaelkelly.org](mailto:m@michaelkelly.org). (You can
-use my [GPG key](assets/m-at-michaelkelly-dot-org-gpg.txt) if you want.)
+You can email me at [m@michaelkelly.org](mailto:m@michaelkelly.org).
 
 Here's my [resume](assets/michael-kelly-resume-jul-2022.pdf).
 
-I occasionally put things on [GitHub](https://github.com/mjkelly).
+I have code on [sourcehut](https://git.sr.ht/~mkelly/) and
+[GitHub](https://github.com/mjkelly).
 
 I have a [blog](https://blog.michaelkelly.org) which is not frequently updated.
 

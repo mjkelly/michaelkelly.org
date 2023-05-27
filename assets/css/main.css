@@ -27,8 +27,8 @@ nav li {
   width: 80px;
 }
 
-.current {
-  border-bottom: 1px solid #999;
+a.current {
+  border-bottom: 2px solid #478dff;
 }
 
 h2 {
@@ -42,6 +42,10 @@ a {
 
 a:hover {
   color: #2d5aa3;
+}
+
+a.current:hover {
+  border-bottom: 2px solid #2d5aa3;
 }
 
 p {
