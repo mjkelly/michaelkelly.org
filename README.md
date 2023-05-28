@@ -1,6 +1,9 @@
 # michaelkelly.org
 
-Contents of www.michaelkelly.org.
+The canonical location of this repo is:
+<https://git.sr.ht/~mkelly/michaelkelly.org>. Other locations are mirrors.
+
+Contents of www.michaelkelly.org. 
 
 The site is built with [Hugo](https://gohugo.io/).
 
