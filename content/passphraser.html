@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.93.3" />
+	<meta name="generator" content="Hugo 0.98.0" />
   <meta charset="UTF-8">
   <title>Passphraser</title>
   
@@ -58,11 +58,14 @@ crack a given password is always decreasing, as computers get faster and
 faster.</p>
 <p>Here are some references:</p>
 <ul>
-<li><a href="https://www.cnbc.com/2022/03/20/study-if-your-passwords-are-less-than-8-characters-long-change-them.html#:~:text=The%20findings%20suggest%20that%20even,hours%20by%20the%20average%20hacker.">CNBC</a></li>
+<li><a href="https://www.cnbc.com/2022/03/20/study-if-your-passwords-are-less-than-8-characters-long-change-them.html">CNBC</a></li>
 <li><a href="https://www.security.org/how-secure-is-my-password/">security.org</a></li>
 </ul>
 <p>All the passwords generated on this site, regardless of settings, exceed the
-recommendations in NIST&rsquo;s <a href="https://pages.nist.gov/800-63-3/sp800-63b.html">Digital Identity Guidelines</a>, updated in 2020. (See &ldquo;5.1.1.1 Memorized Secret Authenticators&rdquo;.)</p>
+complexity of the recommended password length from NIST&rsquo;s <a href="https://pages.nist.gov/800-63-3/sp800-63b.html">Digital Identity
+Guidelines</a>, updated in 2020.
+(See &ldquo;5.1.1.1 Memorized Secret Authenticators&rdquo;. NIST&rsquo;s guidelines are in terms
+of passwords, not passphrases.)</p>
 <h2 id="how-do-i-know-i-can-trust-this-page">How do I know I can trust this page?</h2>
 <p>Getting your password from a website feels a little sketchy. Here are some precautions you can take:</p>
 <ul>
@@ -74,16 +77,20 @@ recommendations in NIST&rsquo;s <a href="https://pages.nist.gov/800-63-3/sp800-6
 <p>The most important thing you can do is <strong>not reuse passwords</strong>. This means use
 a unique password for each site, ideally, by using a password
 manager.</p>
-<p>Here are some popular ones:</p>
+<p>Here two recommended password managers:</p>
 <ul>
-<li><a href="https://1password.com/">1Password</a></li>
-<li><a href="https://bitwarden.com/">BitWarden</a></li>
-<li><a href="https://www.lastpass.com/">LastPass</a></li>
+<li><a href="https://1password.com/">1Password</a> (paid)</li>
+<li><a href="https://bitwarden.com/">BitWarden</a> (free)</li>
+</ul>
+<p>References for password manager recommendations:</p>
+<ul>
+<li><a href="https://www.nytimes.com/wirecutter/reviews/best-password-managers/">Wirecutter (New York Times), 2023</a></li>
+<li><a href="https://www.wired.com/story/best-password-managers/">Wired, 2023</a></li>
+<li><a href="https://www.consumerreports.org/electronics-computers/password-managers/best-password-managers-review-digital-security-privacy-ease-of-use-a7337649384/">Consumer Reports, 2021</a></li>
 </ul>
 <h2 id="how-do-you-determine-password-strength-how-do-you-compare-the-strength-of-a-password-and-a-passphrase">How do you determine password strength? How do you compare the strength of a password and a passphrase?</h2>
-<p>If you want to know how I&rsquo;m comparing the strength of passwords and passphrases
-and don&rsquo;t mind a little math, read on. If you don&rsquo;t care, feel free to skip
-over this.</p>
+<p><em>Math alert! You don&rsquo;t need to know this to make use of the rest of this page.
+This is here in case you&rsquo;re curious!</em></p>
 <p>The most principled way of determining password complexity is to assume your attacker knows your password generation scheme. So if you&rsquo;re using a 10-character random password with a specific set of special characters, assume they know that. Now, trick to remaining secure is to make them search as many passwords as possible.</p>
 <p>For instance, a 5-character random password made up of only lowercase letters (26 options), has <code>26 * 26 * 26 * 26 * 26</code> combinations, because you can use any of 26 different letters in each of 5 places. That&rsquo;s 11,881,376 combinations. That sounds like a lot, but hackers can guess passwords at a very high rate that&rsquo;s always increasing.</p>
 <p>Since these numbers of combinations get huge, we usually talk about the log-base-2 (log2) of these numbers. <code>log2(11,881,376) = 23.5</code>. (Which means, <code>2^23.5 = 11,881,376</code>.) . We call this number <em>bits of entropy</em>, so a 5-character random password made up of only lowercase letters has 23.5 bits of entropy. Remember, we&rsquo;re talking about log-base-2, so for every added bit of entropy in a password, an attacker must guess twice as many combinations.</p>
@@ -94,7 +101,7 @@ over this.</p>
 
     <div id="footer">
       Made with ❤️  in Los Angeles, California, USA.<br>
-      Copyright 2022 Michael Kelly.<br>
+      Copyright 2022-2023 Michael Kelly.<br>
       <a href="https://github.com/mjkelly/passphraser">View the code on Github</a>.
     </div>
   </div>
