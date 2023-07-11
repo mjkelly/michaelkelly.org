@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>michaelkelly.org{{ if ne .Title "home" }}: {{.Title}}{{ end }}</title>
@@ -11,10 +11,10 @@
   <meta name="Description" content="Personal page of Michael Kelly, a software engineer in New York, NY, USA.">
 </head>
 <body>
-  <h1 class="title">michaelkelly.org{{ if ne .Title "home" }}: {{.Title}}{{ end }}</h1>
+  <h1 class="title">michaelkelly.org{{ if ne .Title "home" }}/{{.Title}}{{ end }}</h1>
   {{ partial "nav.html" . }}
-  <div class="container">
+  <main class="container">
     {{ .Content }}
-  </div>
+  </main>
 </body>
 </html>
