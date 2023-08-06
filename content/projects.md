@@ -26,8 +26,8 @@ menu:
 - [Marry-Fuck-Kill](http://marryfuckkill.com):
   Web version of the parlor game, with user-made content. Collaboration with
   [Hunter Freyer](http://www.hjfreyer.com/). <b>Beware</b>, all content is
-  user-submitted, a lot is distateful and NSFW because it's the internet. Ask
-  me what I learned about the challenges of content moderation.
+  user-submitted, and some is NSFW despite our best attempts. (Ask me what I
+  learned about the challenges of content moderation!)
 
 - [CampusMap](http://campusmap.michaelkelly.org):
   An interactive map of the UC San Diego campus. Collaboration with David
