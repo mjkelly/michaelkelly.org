@@ -11,7 +11,7 @@
   <meta name="Description" content="Personal page of Michael Kelly, a software engineer in New York, NY, USA.">
 </head>
 <body>
-  <h1 class="title">michaelkelly.org{{ if ne .Title "home" }}/{{.Title}}{{ end }}</h1>
+  <h1 class="title">michaelkelly.org{{ if ne .Title "home" }}/<wbr>{{.Title}}{{ end }}</h1>
   {{ partial "nav.html" . }}
   <main class="container">
     {{ .Content }}
