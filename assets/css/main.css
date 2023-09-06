@@ -28,7 +28,8 @@ nav li {
 }
 
 a.current {
-  border-bottom: 2px solid #478dff;
+  border-bottom: 3px solid #0054b8;
+  text-decoration: none;
 }
 
 h2 {
@@ -36,8 +37,8 @@ h2 {
 }
 
 a {
-  color: #478dff;
-  text-decoration: none;
+    color: #0054b8;
+    text-decoration: underline;
 }
 
 a:hover {
@@ -45,7 +46,7 @@ a:hover {
 }
 
 a.current:hover {
-  border-bottom: 2px solid #2d5aa3;
+  border-bottom: 3px solid #2d5aa3;
 }
 
 p {
