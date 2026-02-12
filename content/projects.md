@@ -10,7 +10,7 @@ menu:
 
 ## Recent
 
-- [Passphraser](https://www.michaelkelly.org/passphraser.html):
+- [Passphraser](/passphraser.html):
   A single-page passphrase generator that can be saved and used offline.
   [Here's the code](https://github.com/mjkelly/passphraser).
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.121.2">
+	<meta name="generator" content="Hugo 0.147.8">
   <meta charset="UTF-8">
   <title>Passphraser</title>
   
@@ -22,9 +22,9 @@
       <div class="button-container">
         Using 
         <select id="length">
-          <option value="4">4 words</option>
-          <option value="5" selected>5 words</option>
-          <option value="6">6 words</option>
+          <option value="5">5 words</option>
+          <option value="6" selected>6 words</option>
+          <option value="7">7 words</option>
         </select>
       </div>
       <div class="button-container">
@@ -57,11 +57,14 @@ faster.</p>
 <li><a href="https://www.cnbc.com/2022/03/20/study-if-your-passwords-are-less-than-8-characters-long-change-them.html">CNBC</a></li>
 <li><a href="https://www.security.org/how-secure-is-my-password/">security.org</a></li>
 </ul>
-<p>All the passwords generated on this site, regardless of settings, exceed the
-complexity of the recommended password length from NIST&rsquo;s <a href="https://pages.nist.gov/800-63-3/sp800-63b.html">Digital Identity
-Guidelines</a>, updated in 2020.
-(See &ldquo;5.1.1.1 Memorized Secret Authenticators&rdquo;. NIST&rsquo;s guidelines are in terms
-of passwords, not passphrases.)</p>
+<p><strong>If you choose a password length of 7 words</strong>, passwords generated will exceed
+the password complexity requirements of NIST
+<a href="https://pages.nist.gov/800-63-4/sp800-63b.html#password">SP 800-63B-4</a> for
+passwords used without multifactor authentication, updated in 2025. (NIST&rsquo;s
+guidelines are in terms of password length, which we translate to passphrase
+via an entropy calculation. We assume, favorably, that passwords are entirely
+random. A 6-word passphrase should also be fine, especially if you use
+multifactor authentication.)</p>
 <h2 id="how-do-i-know-i-can-trust-this-page">How do I know I can trust this page?</h2>
 <p>Getting your password from a website feels a little sketchy. Here are some precautions you can take:</p>
 <ul>
@@ -97,7 +100,7 @@ This is here in case you&rsquo;re curious!</em></p>
 
     <div id="footer">
       Made with ❤️  in Los Angeles, California, USA.<br>
-      Copyright 2022-2023 Michael Kelly.<br>
+      Copyright 2022-2026 Michael Kelly.<br>
       <a href="https://github.com/mjkelly/passphraser">View the code on Github</a>.
     </div>
   </div>
