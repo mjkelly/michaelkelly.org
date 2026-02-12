@@ -4,9 +4,15 @@ secrets:
 packages:
   - aws-cli
   - hugo
-sources:
-  - https://git.sr.ht/~mkelly/michaelkelly.org
+environment:
+  REPO: michaelkelly.org
+  PUSH_BRANCH: master
 tasks:
+  - check-branch: |
+      cd ~/"${REPO}"
+      if [ "x$(git rev-parse origin/${PUSH_BRANCH} --)" != "x$(git rev-parse HEAD --)" ]; then
+          complete-build
+      fi
   - deploy: |
-      cd michaelkelly.org
+      cd ~/"${REPO}"
       ./scripts/deploy.sh
