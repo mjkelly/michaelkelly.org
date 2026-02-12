@@ -1,16 +1,27 @@
-body {
-  font-family: Helvetica, sans-serif;
-  margin: 0;
+/* === Reset & Base === */
+html {
+  scroll-behavior: smooth;
 }
 
+body {
+  font-family: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* === Title === */
 h1.title {
-  font-family: "Courier New", Courier, monospace;
   padding: 50px 0 20px 0;
   margin: 0;
   width: 100%;
   text-align: center;
+  font-size: 1.8em;
+  color: #ffffff;
 }
 
+/* === Navigation === */
 nav {
   text-align: center;
 }
@@ -24,37 +35,107 @@ nav li {
   text-transform: capitalize;
   list-style-type: none;
   display: inline-block;
-  width: 80px;
+  margin: 0 10px;
+}
+
+nav a {
+  color: #e0e0e0;
+  text-decoration: none;
+  padding: 2px 0;
+}
+
+nav a:hover {
+  color: #00cc66;
 }
 
 a.current {
-  border-bottom: 3px solid #0054b8;
+  color: #00cc66;
+  border-bottom: 2px solid #00cc66;
   text-decoration: none;
 }
 
-h2 {
-  margin: 40px 0 0 0;
+a.current:hover {
+  border-bottom-color: #00ff7f;
+  color: #00ff7f;
 }
 
+/* === Headings === */
+h2 {
+  margin: 40px 0 0 0;
+  color: #ffffff;
+}
+
+h2::before {
+  content: "## ";
+  color: #00cc66;
+}
+
+/* === Links === */
 a {
-    color: #0054b8;
-    text-decoration: underline;
+  color: #00cc66;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #2d5aa3;
+  text-decoration: underline;
 }
 
-a.current:hover {
-  border-bottom: 3px solid #2d5aa3;
+a:focus-visible {
+  outline: 2px solid #00cc66;
+  outline-offset: 2px;
 }
 
+/* === Paragraphs === */
 p {
-  margin: 15px 0 15px 0;
+  margin: 15px 0;
 }
 
+/* === Code === */
+code {
+  background-color: #1a1a1a;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: inherit;
+}
+
+pre {
+  background-color: #1a1a1a;
+  padding: 16px;
+  overflow-x: auto;
+  border-radius: 3px;
+}
+
+pre code {
+  padding: 0;
+  background: none;
+}
+
+/* === Container === */
 .container {
   max-width: 740px;
   margin: 0 auto;
   width: 80%;
+}
+
+/* === Selection === */
+::selection {
+  background-color: #00cc66;
+  color: #0a0a0a;
+}
+
+/* === Accessibility: High Contrast === */
+@media (prefers-contrast: more) {
+  body {
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  a {
+    color: #33ff99;
+  }
+
+  a.current {
+    color: #33ff99;
+    border-bottom-color: #33ff99;
+  }
 }

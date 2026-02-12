@@ -8,6 +8,8 @@
   {{ $style := resources.Get "css/main.css" | minify | fingerprint }}
   <link rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="color-scheme" content="dark">
   <meta name="Description" content="Personal page of Michael Kelly, a software engineer in New York, NY, USA.">
 </head>
 <body>
