@@ -1,14 +1,47 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #4af626;
+  color: #0d1117;
+}
+
 body {
-  font-family: Helvetica, sans-serif;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'SF Mono', 'Consolas', 'Liberation Mono', monospace;
   margin: 0;
+  background: #0d1117;
+  color: #4af626;
+  line-height: 1.6;
 }
 
 h1.title {
-  font-family: "Courier New", Courier, monospace;
   padding: 50px 0 20px 0;
   margin: 0;
   width: 100%;
   text-align: center;
+  color: #00ff41;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+h1.title::after {
+  content: '\2588';
+  animation: blink 1s step-end infinite;
+  color: #00ff41;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  h1.title::after {
+    animation: none;
+  }
 }
 
 nav {
@@ -21,40 +54,115 @@ nav ul {
 }
 
 nav li {
-  text-transform: capitalize;
   list-style-type: none;
   display: inline-block;
-  width: 80px;
+  margin: 0 6px;
 }
 
-a.current {
-  border-bottom: 3px solid #0054b8;
+nav a {
+  color: #4af626;
   text-decoration: none;
+}
+
+nav a::before {
+  content: '[';
+  color: #238636;
+}
+
+nav a::after {
+  content: ']';
+  color: #238636;
+}
+
+nav a:hover {
+  color: #00ff41;
+}
+
+nav a:hover::before,
+nav a:hover::after {
+  color: #00ff41;
+}
+
+nav a.current {
+  color: #0d1117;
+  background: #4af626;
+  border-bottom: none;
+  text-decoration: none;
+}
+
+nav a.current::before,
+nav a.current::after {
+  color: #0d1117;
+  background: #4af626;
 }
 
 h2 {
   margin: 40px 0 0 0;
+  color: #00ff41;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+h2::before {
+  content: '## ';
+  color: #238636;
 }
 
 a {
-    color: #0054b8;
-    text-decoration: underline;
+  color: #00d4ff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 a:hover {
-  color: #2d5aa3;
+  color: #7ee8ff;
 }
 
-a.current:hover {
-  border-bottom: 3px solid #2d5aa3;
+a:focus-visible {
+  outline: 2px solid #00d4ff;
+  outline-offset: 2px;
 }
 
 p {
-  margin: 15px 0 15px 0;
+  margin: 15px 0;
+}
+
+ul {
+  padding-left: 1.5em;
+}
+
+li {
+  margin: 8px 0;
+}
+
+li::marker {
+  color: #238636;
+}
+
+b, strong {
+  color: #ff7b72;
+  font-weight: 700;
 }
 
 .container {
   max-width: 740px;
   margin: 0 auto;
   width: 80%;
+  padding-bottom: 40px;
+}
+
+html {
+  scrollbar-color: #238636 #0d1117;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #238636;
 }
