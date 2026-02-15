@@ -1,9 +1,9 @@
 :root {
-  --color-bg: #0d1117;
-  --color-text: #4af626;
-  --color-bright: #00ff41;
+  --color-bg: #242424;
+  --color-text: #47b413;
+  --color-bright: #47b413;
   --color-dim: #238636;
-  --color-link: #00d4ff;
+  --color-link: #24acd4;
   --color-link-hover: #7ee8ff;
   --color-bold: #ff7b72;
   --container-max-width: 740px;
@@ -148,6 +148,11 @@ li {
 }
 
 li::marker {
+  color: var(--color-dim);
+}
+
+.container li::marker {
+  content: '* ';
   color: var(--color-dim);
 }
 
