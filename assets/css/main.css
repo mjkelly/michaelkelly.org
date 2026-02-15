@@ -1,3 +1,15 @@
+:root {
+  --color-bg: #0d1117;
+  --color-text: #4af626;
+  --color-bright: #00ff41;
+  --color-dim: #238636;
+  --color-link: #00d4ff;
+  --color-link-hover: #7ee8ff;
+  --color-bold: #ff7b72;
+  --container-max-width: 740px;
+  --line-height: 1.6;
+}
+
 *,
 *::before,
 *::after {
@@ -5,16 +17,16 @@
 }
 
 ::selection {
-  background: #4af626;
-  color: #0d1117;
+  background: var(--color-text);
+  color: var(--color-bg);
 }
 
 body {
   font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'SF Mono', 'Consolas', 'Liberation Mono', monospace;
   margin: 0;
-  background: #0d1117;
-  color: #4af626;
-  line-height: 1.6;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: var(--line-height);
 }
 
 h1.title {
@@ -22,7 +34,7 @@ h1.title {
   margin: 0;
   width: 100%;
   text-align: center;
-  color: #00ff41;
+  color: var(--color-bright);
   font-size: 1.8rem;
   font-weight: 700;
 }
@@ -30,7 +42,7 @@ h1.title {
 h1.title::after {
   content: '\2588';
   animation: blink 1s step-end infinite;
-  color: #00ff41;
+  color: var(--color-bright);
   margin-left: 2px;
 }
 
@@ -60,66 +72,66 @@ nav li {
 }
 
 nav a {
-  color: #4af626;
+  color: var(--color-text);
   text-decoration: none;
 }
 
 nav a::before {
   content: '[';
-  color: #238636;
+  color: var(--color-dim);
 }
 
 nav a::after {
   content: ']';
-  color: #238636;
+  color: var(--color-dim);
 }
 
 nav a:hover {
-  color: #00ff41;
+  color: var(--color-bright);
 }
 
 nav a:hover::before,
 nav a:hover::after {
-  color: #00ff41;
+  color: var(--color-bright);
 }
 
 nav a.current {
-  color: #0d1117;
-  background: #4af626;
+  color: var(--color-bg);
+  background: var(--color-text);
   border-bottom: none;
   text-decoration: none;
 }
 
 nav a.current::before,
 nav a.current::after {
-  color: #0d1117;
-  background: #4af626;
+  color: var(--color-bg);
+  background: var(--color-text);
 }
 
 h2 {
   margin: 40px 0 0 0;
-  color: #00ff41;
+  color: var(--color-bright);
   font-size: 1.2rem;
   font-weight: 700;
 }
 
 h2::before {
   content: '## ';
-  color: #238636;
+  color: var(--color-dim);
 }
 
 a {
-  color: #00d4ff;
+  color: var(--color-link);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
 a:hover {
-  color: #7ee8ff;
+  color: var(--color-link-hover);
 }
 
 a:focus-visible {
-  outline: 2px solid #00d4ff;
+  outline: 2px solid var(--color-link);
   outline-offset: 2px;
 }
 
@@ -136,23 +148,23 @@ li {
 }
 
 li::marker {
-  color: #238636;
+  color: var(--color-dim);
 }
 
 b, strong {
-  color: #ff7b72;
+  color: var(--color-bold);
   font-weight: 700;
 }
 
 .container {
-  max-width: 740px;
+  max-width: var(--container-max-width);
   margin: 0 auto;
   width: 80%;
   padding-bottom: 40px;
 }
 
 html {
-  scrollbar-color: #238636 #0d1117;
+  scrollbar-color: var(--color-dim) var(--color-bg);
 }
 
 ::-webkit-scrollbar {
@@ -160,9 +172,9 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0d1117;
+  background: var(--color-bg);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #238636;
+  background: var(--color-dim);
 }
