@@ -1,9 +1,9 @@
-<nav>
+<nav aria-label="Main navigation">
   <ul>
   {{ $currentPage := . }}
   {{ range .Site.Menus.main }}
     <li>
-      <a class="pane {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}current{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+      <a class="pane {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}current{{ end }}" href="{{ .URL }}"{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Name }}</a>
     </li>
   {{ end }}
   </ul>

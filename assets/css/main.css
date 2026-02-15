@@ -1,8 +1,8 @@
 :root {
   --color-bg: #242424;
-  --color-text: #47b413;
-  --color-bright: #47b413;
-  --color-dim: #238636;
+  --color-text: #5ec722;
+  --color-bright: #5ec722;
+  --color-dim: #3a9d48;
   --color-link: #24acd4;
   --color-link-hover: #7ee8ff;
   --color-bold: #ff7b72;
@@ -19,6 +19,22 @@
 ::selection {
   background: var(--color-text);
   color: var(--color-bg);
+}
+
+.skip-nav {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 8px 16px;
+  background: var(--color-bg);
+  color: var(--color-link);
+  text-decoration: underline;
+}
+
+.skip-nav:focus {
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 body {
@@ -40,7 +56,7 @@ h1.title {
 }
 
 h1.title::after {
-  content: '\2588';
+  content: '_';
   animation: blink 1s step-end infinite;
   color: var(--color-bright);
   margin-left: 2px;

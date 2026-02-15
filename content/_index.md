@@ -7,11 +7,12 @@ menu:
     url: "/"
     weight: 1
 ---
-Hi! I'm Michael Kelly (he/him). I'm a software engineer in Los Angeles.
+Hi! I'm Michael Kelly (he/him). I'm a software engineer in Los Angeles. I've
+focused primarily on infrastructure and reliability.
 
 You can email me at [m@michaelkelly.org](mailto:m@michaelkelly.org).
 
-Here's my [resume](assets/michael-kelly-resume-jun-2024.pdf).
+Here's my [resume (PDF)](assets/michael-kelly-resume-jun-2024.pdf).
 
 I have code on [sourcehut](https://git.sr.ht/~mkelly/) and
 [GitHub](https://github.com/mjkelly).
