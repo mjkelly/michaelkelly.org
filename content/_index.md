@@ -7,8 +7,7 @@ menu:
     url: "/"
     weight: 1
 ---
-Hi! I'm Michael Kelly (he/him). I'm a software engineer in Los Angeles. I've
-focused primarily on infrastructure and reliability.
+Hi! I'm Michael Kelly (he/him). I'm a software engineer in Los Angeles.
 
 You can email me at [m@michaelkelly.org](mailto:m@michaelkelly.org).
 
