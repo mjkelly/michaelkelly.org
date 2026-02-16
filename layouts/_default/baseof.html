@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>michaelkelly.org{{ if ne .Title "home" }}: {{.Title}}{{ end }}</title>
-  <link rel="shortcut icon" href="/michaelkelly-org-rounded.png" />
+  <link rel="shortcut icon" href="/assets/mk-favico.png" />
   <link rel="canonical" href="{{ .Permalink }}" />
   {{ $style := resources.Get "css/main.css" | minify | fingerprint }}
   <link rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}">
