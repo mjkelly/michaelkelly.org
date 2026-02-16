@@ -1,19 +1,11 @@
 :root {
   --color-bg: #242424;
   --color-text: #5ec722;
-  --color-bright: #5ec722;
-  --color-dim: #3a9d48;
+  --color-bright: #1cd71c;
   --color-link: #24acd4;
   --color-link-hover: #7ee8ff;
-  --color-bold: #ff7b72;
   --container-max-width: 740px;
   --line-height: 1.6;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
 }
 
 ::selection {
@@ -46,30 +38,10 @@ body {
 }
 
 h1.title {
-  padding: 50px 0 20px 0;
-  margin: 0;
+  padding: 30px 0 30px 0;
   width: 100%;
   text-align: center;
   color: var(--color-bright);
-  font-size: 1.8rem;
-  font-weight: 700;
-}
-
-h1.title::after {
-  content: '_';
-  animation: blink 1s step-end infinite;
-  color: var(--color-bright);
-  margin-left: 2px;
-}
-
-@keyframes blink {
-  50% { opacity: 0; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  h1.title::after {
-    animation: none;
-  }
 }
 
 nav {
@@ -94,12 +66,12 @@ nav a {
 
 nav a::before {
   content: '[';
-  color: var(--color-dim);
+  color: var(--color-text);
 }
 
 nav a::after {
   content: ']';
-  color: var(--color-dim);
+  color: var(--color-text);
 }
 
 nav a:hover {
@@ -114,8 +86,6 @@ nav a:hover::after {
 nav a.current {
   color: var(--color-bg);
   background: var(--color-text);
-  border-bottom: none;
-  text-decoration: none;
 }
 
 nav a.current::before,
@@ -127,13 +97,11 @@ nav a.current::after {
 h2 {
   margin: 40px 0 0 0;
   color: var(--color-bright);
-  font-size: 1.2rem;
-  font-weight: 700;
 }
 
 h2::before {
   content: '## ';
-  color: var(--color-dim);
+  color: var(--color-bright);
 }
 
 a {
@@ -148,54 +116,19 @@ a:hover {
 
 a:focus-visible {
   outline: 2px solid var(--color-link);
-  outline-offset: 2px;
-}
-
-p {
-  margin: 15px 0;
 }
 
 ul {
   padding-left: 1.5em;
 }
 
-li {
-  margin: 8px 0;
-}
-
-li::marker {
-  color: var(--color-dim);
-}
-
 .container li::marker {
   content: '* ';
-  color: var(--color-dim);
-}
-
-b, strong {
-  color: var(--color-bold);
-  font-weight: 700;
+  color: var(--color-text);
 }
 
 .container {
   max-width: var(--container-max-width);
   margin: 0 auto;
   width: 80%;
-  padding-bottom: 40px;
-}
-
-html {
-  scrollbar-color: var(--color-dim) var(--color-bg);
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--color-bg);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--color-dim);
 }
