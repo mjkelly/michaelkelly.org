@@ -16,3 +16,8 @@ tasks:
   - deploy: |
       cd ~/"${REPO}"
       ./scripts/deploy.sh
+submitter:
+  git.sr.ht:
+    enabled: true
+    allow-refs:
+      - refs/heads/master
