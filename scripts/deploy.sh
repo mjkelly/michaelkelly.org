@@ -18,12 +18,12 @@ echo "Deploying..."
 echo "Synchronizing directory $PWD/$dir"
 aws --profile="$profile" \
   s3 sync "$dir" "$bucket" \
-  --exclude '.well-known/openpgpkey'
+  --exclude '.well-known/openpgpkey' \
   --cache-control=max-age=3600
 
 aws --profile="$profile" \
   s3 sync "$dir/.well-known/openpgpkey" "$bucket/.well-known/openpgpkey" \
-  --content-type=application/octet-stream
+  --content-type=application/octet-stream \
   --cache-control=max-age=3600
 
 echo "Invalidating CloudFront..."
