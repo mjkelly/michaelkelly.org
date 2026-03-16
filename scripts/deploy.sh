@@ -11,20 +11,21 @@ scripts=$(dirname $0)
 which aws || (echo "'aws' command not found. Aborting."; exit 2)
 [ -f $cfg ] || (echo "Config file $cfg does not exist. Aborting."; exit 2)
 
-echo "Building..."
+echo "=== Building ==="
 ${scripts}/generate.sh
 
-echo "Deploying..."
-echo "Synchronizing directory $PWD/$dir"
-aws --profile="$profile" \
-  s3 sync "$dir" "$bucket" \
-  --exclude '*/.well-known/openpgpkey/*' \
-  --cache-control=max-age=3600
+echo "=== Deploying ==="
 
 echo "Special handling for .well-known directory..."
 aws --profile="$profile" \
-  s3 sync "$dir/.well-known/openpgpkey" "$bucket/.well-known/openpgpkey" \
+  s3 cp "$dir/.well-known/openpgpkey" "$bucket/.well-known/openpgpkey" \
+  --recursive \
   --content-type=application/octet-stream \
+  --cache-control=max-age=3600
+
+echo "Synchronizing directory $PWD/$dir ..."
+aws --profile="$profile" \
+  s3 sync "$dir" "$bucket" \
   --cache-control=max-age=3600
 
 echo "Invalidating CloudFront..."
