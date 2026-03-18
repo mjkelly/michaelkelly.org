@@ -18,6 +18,10 @@ I have code on [sourcehut](https://git.sr.ht/~mkelly/) and
 
 I have a [blog](https://blog.michaelkelly.org) which is not frequently updated.
 
+My GPG public key fingerprint is:
+[8F99 B90B 14DC 8FE3 D1CE 0673 2D70 3BB3 DBED 8262](dbed8262.txt).
+
 {{< unsafe >}}
 I'm also on <a rel="me" href="https://techhub.social/@mkelly">Mastodon</a>.
 {{< /unsafe >}}
+
