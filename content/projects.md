@@ -12,12 +12,12 @@ menu:
 
 - [Passphraser](/passphraser.html):
   A single-page passphrase generator that can be saved and used offline.
-  [Here's the code](https://github.com/mjkelly/passphraser).
+  [Here's the code](https://git.sr.ht/~mkelly/passphraser).
 
-- [Weatherdash](https://github.com/mjkelly/weatherdash):
+- [Weatherdash](https://git.sr.ht/~mkelly/weatherdash-go):
   A self-hosted weather dashboard designed for small screens.
 
-- [experiments](https://github.com/mjkelly/experiments):
+- [experiments](https://git.sr.ht/~mkelly/experiments):
   This is a GitHub repo I keep with all experimental things that aren't
   large or involved enough to warrant their own repo.
 
