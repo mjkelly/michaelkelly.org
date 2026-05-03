@@ -46,16 +46,15 @@ function _save() {
 # 
 # Basic test pattern:
 # function test_foo(){
-#   test_name=openpgpkey
-#   actual $test_name <(actual command that outputs the value)
-#   expected $test_name <(echo "expected value")
-#   compare $test_name
+#   actual <(actual command that outputs the value)
+#   expected <(echo "expected value")
+#   compare
 # }
 #
 # * use the actual, expected, and compare helpers to avoid managing output
-#   files yourself, showing helpful diffs on msimatches.
+#   files yourself, and so you get helpful diffs on mismatches.
 # * tests must start with "test_" to be automatically called
-#
+
 # Did we push at all / did cloudfront invalidate?
 function test_revision_txt() {
   actual <(curl --silent $site/revision.txt)
@@ -64,28 +63,28 @@ function test_revision_txt() {
 }
 
 # test /
-function test_top_level(){
+function test_top_level() {
   expect_http_200 ""
 }
 
 # check that we can access directories without the trailing slash
-function test_directory_with_no_slash(){
+function test_directory_with_no_slash() {
   expect_http_200 "/projects"
 }
 
 # check that we can access directories with trailing slash but with no
 # /index.html
-function test_directory_with_slash(){
+function test_directory_with_slash() {
   expect_http_200 "/projects/"
 }
 
 # fully specify a file in a subdirectory - this should always work
-function test_directory_with_index(){
+function test_directory_with_index() {
   expect_http_200 "/projects/index.html"
 }
 
 # check files with odd headers / content-types
-function test_openpgpkey(){
+function test_openpgpkey() {
   actual <(
     curl --silent -I -H "Origin: https://example.com" "$site/.well-known/openpgpkey/hu/pcgudogicctdyjg4eiwtmbdr8mda3fze" \
     | grep -E 'access-control-allow-origin:|content-type:'
@@ -94,19 +93,10 @@ function test_openpgpkey(){
   compare
 }
 
-# test_revision_txt
-# test_top_level
-# test_directory_with_no_slash
-# test_directory_with_slash
-# test_directory_with_index
-# test_openpgpkey
-
-mkdir "${results}"
-
+mkdir -p -- "${results}"
 for test_func in $(compgen -A function "test_"); do
   _cur_test="$test_func"
   echo "===== $test_func ====="
   $test_func
 done
-
 rmdir --ignore-fail-on-non-empty -- "${results}"
